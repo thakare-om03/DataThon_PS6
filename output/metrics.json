@@ -1,0 +1,9 @@
+[
+  {
+    "audio_path": "output/100+ Computer Science Concepts Explained_processed.wav",
+    "num_chunks": 25,
+    "total_duration": 729.86,
+    "avg_confidence": 1.0,
+    "output_dir": "output"
+  }
+]
