@@ -130,6 +130,19 @@ Need help? You can:
 
 ## 📸 Screenshots
 
+### Streamlit Interface
+
 ![Home Page](https://raw.githubusercontent.com/achalbajpai/youtube-semantic-segmenter/main/docs/images/home.png)
 ![Analytics](https://raw.githubusercontent.com/achalbajpai/youtube-semantic-segmenter/main/docs/images/analytics.png)
 ![Configuration](https://raw.githubusercontent.com/achalbajpai/youtube-semantic-segmenter/main/docs/images/config.png)
+
+### Processing Output
+
+![Transcripts](output/transcripts.jpg)
+
+### Chunk Creation Process
+
+![Chunks 1](output/chunks_01.jpg)
+![Chunks 2](output/chunks_02.jpg)
+![Chunks 3](output/chunks_03.jpg)
+![Chunks 4](output/chunks_04.jpg)

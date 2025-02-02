@@ -24,6 +24,7 @@ wheels/
 venv/
 env/
 ENV/
+.venv/
 
 # IDE
 .idea/
@@ -40,6 +41,7 @@ ENV/
 # Project specific
 output/
 config/
+test_output/
 *.wav
 *.mp3
 *.flac
