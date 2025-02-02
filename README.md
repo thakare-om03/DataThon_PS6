@@ -1,79 +1,148 @@
-## YouTube Semantic Segmenter
+# YouTube Semantic Segmenter 🎬
 
-A Python tool that downloads YouTube videos, transcribes them using OpenAI’s Whisper model, and segments them into semantically meaningful chunks with transcripts.
+A powerful Streamlit application that segments YouTube videos into semantically meaningful chunks with high-quality transcripts. Built with OpenAI's Whisper model and advanced semantic analysis.
 
-## Features
-- Downloads YouTube videos using yt-dlp  
-- Transcribes audio using OpenAI’s Whisper model (supports both base and large-v3)  
-- Creates semantically meaningful chunks based on content  
-- Validates chunk quality and audio processing  
-- Provides detailed transcripts for each chunk  
-- Parallel processing for efficient chunk generation  
-- Audio preprocessing for better quality  
-- Detailed metrics and metadata for each processing step  
+## ✨ Features
 
-## Requirements
-- Python 3.8+  
-- FFmpeg  
-- yt-dlp  
-- Other dependencies listed in requirements.txt  
+-  🎯 **Intelligent Segmentation**: Splits videos into meaningful chunks based on semantic content
+-  🔊 **High-Quality Transcription**: Uses OpenAI's Whisper model for accurate transcription
+-  📊 **Advanced Analytics**: Visualize chunk quality, duration distribution, and more
+-  ⚙️ **Configurable Settings**: Customize model size, chunk duration, and processing options
+-  📥 **Multiple Export Options**: Download audio chunks and transcripts
+-  🌐 **Multi-Language Support**: Automatic language detection and transcription
+-  🔄 **Batch Processing**: Process multiple videos efficiently
 
-## Installation
+## 🚀 Quick Start
+
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/thakare-om03/DataThon_PS6.git
-   cd DataThon_PS6
-   ```
+
+```bash
+git clone https://github.com/achalbajpai/youtube-semantic-segmenter.git
+cd youtube-semantic-segmenter
+```
+
 2. Create and activate a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
 3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Install FFmpeg if not already installed:
-   - On macOS: `brew install ffmpeg`  
-   - On Ubuntu: `sudo apt-get install ffmpeg`  
-   - On Windows: Download from FFmpeg website  
 
-## Usage
 ```bash
-python cli.py https://www.youtube.com/watch?v=VIDEO_ID
+pip install -r requirements.txt
 ```
 
-With additional options:
+4. Run the Streamlit app:
+
 ```bash
-python cli.py https://www.youtube.com/watch?v=VIDEO_ID --model-size base --preprocess-audio --validate-chunks --collect-metrics -v
+cd streamlit_app
+streamlit run Home.py
 ```
 
-### Options
-- `--model-size`: Choose between 'base' and 'large-v3' Whisper models (default: large-v3)  
-- `--preprocess-audio`: Apply audio preprocessing for better quality  
-- `--validate-chunks`: Enable chunk quality validation  
-- `--collect-metrics`: Save processing metrics  
-- `-v` or `--verbose`: Enable verbose logging  
+5. Open your browser and navigate to `http://localhost:8501`
 
-## Output
-The tool generates the following outputs in the `output` directory:
+## 🛠️ Configuration
 
-1. `chunks/`: Directory containing WAV files for each segment  
-2. `metadata.json`: Detailed information about each chunk, including timestamps, transcripts, quality metrics, and confidence scores  
-3. `metrics.json`: Overall processing metrics  
+### Model Settings
 
-## Output Screenshots
-### Transcipts
-![alt text](output/transcripts.jpg)
+-  Choose between different Whisper model sizes:
+   -  `tiny`: Fastest but less accurate
+   -  `base`: Good balance of speed and accuracy
+   -  `small`: Better accuracy, slower processing
+   -  `medium`: High accuracy, slower processing
+   -  `large-v3`: Best accuracy, slowest processing
 
-### Chunks Creation
-![alt text](output/chunks_01.jpg)
+### Audio Processing
 
-![alt text](output/chunks_02.jpg)
+-  Configure sample rate and audio format
+-  Enable/disable audio preprocessing
+-  Adjust silence removal settings
 
-![alt text](output/chunks_03.jpg)
+### Chunking Settings
 
-![alt text](output/chunks_04.jpg)
+-  Set minimum and maximum chunk durations
+-  Configure overlap between chunks
+-  Adjust quality validation thresholds
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+## 📊 Analytics
+
+The application provides comprehensive analytics:
+
+-  **Duration Distribution**: Analyze chunk length patterns
+-  **Quality Metrics**: Monitor transcription quality and confidence
+-  **Processing Timeline**: Track processing history
+-  **Text Analysis**: Evaluate transcript characteristics
+
+## 🔧 System Requirements
+
+-  Python 3.9+
+-  FFmpeg
+-  4GB+ RAM (8GB+ recommended for large models)
+-  CUDA-compatible GPU (optional, for faster processing)
+
+## 📦 Dependencies
+
+Main dependencies include:
+
+-  `streamlit`: Web application framework
+-  `openai-whisper`: Speech recognition model
+-  `plotly`: Interactive visualizations
+-  `pandas`: Data manipulation
+-  `torch`: Deep learning framework
+-  `transformers`: NLP tools
+-  `yt-dlp`: YouTube video download
+
+For a complete list, see `requirements.txt`.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+-  [OpenAI Whisper](https://github.com/openai/whisper) for the speech recognition model
+-  [Streamlit](https://streamlit.io/) for the web application framework
+-  [yt-dlp](https://github.com/yt-dlp/yt-dlp) for YouTube video downloading
+
+## 📧 Support
+
+Need help? You can:
+
+-  Open an [issue](https://github.com/achalbajpai/youtube-semantic-segmenter/issues)
+-  Check the [documentation](https://github.com/achalbajpai/youtube-semantic-segmenter/wiki)
+-  Contact the maintainers
+
+## 🌟 Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=achalbajpai/youtube-semantic-segmenter&type=Date)](https://star-history.com/#achalbajpai/youtube-semantic-segmenter&Date)
+
+## 📸 Screenshots
+
+### Streamlit Interface
+
+![Home Page](https://raw.githubusercontent.com/achalbajpai/youtube-semantic-segmenter/main/docs/images/home.png)
+![Analytics](https://raw.githubusercontent.com/achalbajpai/youtube-semantic-segmenter/main/docs/images/analytics.png)
+![Configuration](https://raw.githubusercontent.com/achalbajpai/youtube-semantic-segmenter/main/docs/images/config.png)
+
+### Processing Output
+
+![Transcripts](output/transcripts.jpg)
+
+### Chunk Creation Process
+
+![Chunks 1](output/chunks_01.jpg)
+![Chunks 2](output/chunks_02.jpg)
+![Chunks 3](output/chunks_03.jpg)
+![Chunks 4](output/chunks_04.jpg)
